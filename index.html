@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="script.js"></script>
+
+  <script type="application/javascript">
+    function setBodyAttr(attr, value) {
+      eval('document.body.' + attr + '="' + value + '"')
+    }
+  </script>
+</head>
+<body>
+  <div style="margin: .5in; height: 400; border: 1">
+    <p><b><tt>text</tt></b></p>
+    <form>
+      <select onchange="setBodyAttr('text',
+            this.options[this.selectedIndex].value)">
+        <option value='black'>black
+        <option value='darkblue'>darkblue
+        <option value='red'>red
+      </select>
+
+      <select onchange="setBodyAttr('bgColor',
+            this.options[this.selectedIndex].value)">
+        <option value='white'>white
+        <option value='lightgrey'>gray
+      </select>
+
+      <select onchange="setBodyAttr('link',
+            this.options[this.selectedIndex].value)">
+        <option value='blue'>blue
+        <option value='green'>green
+        <option value='purple'>purple
+      </select>
+
+      <small>
+        <a href="http://some.website.tld/page.html" id="sample">
+          (sample link)</a></small><br>
+    </form>
+
+    <form>
+      <input type="button" value="version" onclick="ver()"/>
+    </form>
+  </div>
+</body>
+</html>
