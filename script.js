@@ -7,3 +7,5 @@ console.log(per);
 
 var per2 = Object.create(Person.prototype);
 console.log(per2);
+
+console.log("it's a lonely day and it's mine");
